@@ -1,0 +1,24 @@
+{
+  "name": "testnode",
+  "version": "1.0.0",
+  "description": "Example node.js echo environment variables in docker.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charbel-khoury/testnode.git"
+  },
+  "author": "charbel khoury",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/charbel-khoury/testnode/issues"
+  },
+  "homepage": "https://github.com/charbel-khoury/testnode#readme",
+  "dependencies": {
+    "http": "0.0.1-security",
+    "url": "^0.11.0"
+  }
+}
