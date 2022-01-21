@@ -26,4 +26,4 @@ jobs:
       - uses: n1dprime/dockerpush@main
         with:
            who-to-greet: 'Mona the Octocat'
- 
+      - run: echo ${GITHUB_EVENT_NAME}
