@@ -4,7 +4,7 @@
   "description": "Example node.js echo environment variables in docker.",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" ",
+    "test": "echo test2",
     "start": "node server.js"
   },
   "repository": {
