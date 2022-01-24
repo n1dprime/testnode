@@ -17,13 +17,22 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
+    if: contains(${GITHUB_EVENT_NAME},'push')
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
+    
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       - uses: n1dprime/dockerpush@main
         with:
            who-to-greet: 'Mona the Octocat'
-      - run: echo ${GITHUB_EVENT_NAME}
+  
+  manual:
+  
+   if: contains(${GITHUB_EVENT_NAME},'workflow_dispatch')      
+   runs-on: ubuntu-latest
+   
+   steps:
+    - run: echo 'hello this is manual test'
