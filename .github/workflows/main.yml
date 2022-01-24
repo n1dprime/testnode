@@ -17,7 +17,7 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    if: ${{env.GITHUB_EVENT_NAME =='push' }}
+    if: ${{github.event_name =='push' }}
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
@@ -31,7 +31,7 @@ jobs:
   
   manual:
   
-   if: ${{env.GITHUB_EVENT_NAME == 'workflow_dispatch'}}      
+   if: ${{github.event_name == 'workflow_dispatch'}}      
    runs-on: ubuntu-latest
    
    steps:
